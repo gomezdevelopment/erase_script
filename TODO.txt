@@ -1,11 +1,12 @@
 Still to do...
+-add 'fdisk' into Steve's Start and Scram ISO
+-add 'shuf' into Steve's Start and Scram ISO
 -algorithm to list all of the attached devices (sd? hd?)
 -algorithm to determine the measure to run
 	if enhanced secure erase
 	else if secure erase
 	else dd
 -backup random spots 
-	(( -might need to add 'shuf' binary to the Steve'sStartAndScram (SSS) ))
 	use shuf to generate from LBA 1 to LBA $(($(sudo fdisk -s /dev/sda)*2))
 		for i in 3; do
 			var$i=$(shuf -n 1 -i0-$(($(fdisk -s /dev/sda)*2)));
