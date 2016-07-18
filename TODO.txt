@@ -1,9 +1,4 @@
 Still to do...
--add 'fdisk' into Steve's Start and Scram ISO
-	-EDIT: compiled. Need to integrate
--add 'shuf' into Steve's Start and Scram ISO
-	-GNU Core Utilities
-	-EDIT: downloaded. working on compiling.
 -algorithm to list all of the attached devices (sd? hd?)
 	-ls /dev/sd? && ls /dev/hd?
 -algorithm to determine the measure to run
