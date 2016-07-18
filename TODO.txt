@@ -1,0 +1,20 @@
+Still to do...
+-algorithm to list all of the attached devices (sd? hd?)
+-algorithm to determine the measure to run
+	if enhanced secure erase
+	else if secure erase
+	else dd
+-backup random spots 
+	(( -might need to add 'shuf' binary to the Steve'sStartAndScram (SSS) ))
+	use shuf to generate from LBA 1 to LBA $(($(sudo fdisk -s /dev/sda)*2))
+		for i in 3; do
+			var$i=$(shuf -n 1 -i0-$(($(fdisk -s /dev/sda)*2)));
+			dd if=/dev/sda of=original.sda.$i count=1 skip=$(( %var$i - 512)); done
+-construct makefile and command to run total number of drives + jobs
+-expand the section to test for 3 random areas to check
+-add reporting
+	date/time
+	command / method of erasure
+	drive PN
+	drive SN
+-Fancy splash screen? :P
