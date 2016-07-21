@@ -36,11 +36,11 @@ dd if=/dev/$1 bs=4k count=1 of=/root/temp1.dat 2> /dev/null
 		fi
 	fi
 
-	hdparm --user-master u --security-set-pass TAIS /dev/$1 > /dev/null
+	hdparm --user-master u --security-set-pass abcd1234 /dev/$1 > /dev/null
 	echo $chain
 
 	echo "Starting Secure Erase..."
-	hdparm --security-erase-enhanced TAIS /dev/$1 > /dev/null
+	hdparm --security-erase-enhanced abcd1234 /dev/$1 > /dev/null
 	echo $chain
 	echo "Enhanced Secure Erase has completed."
 
